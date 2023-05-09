@@ -1,0 +1,14 @@
+/test.ipynb
+/test.py
+/create_db.py
+/create_tables.py
+/db_navigator.py
+/*.log
+/pdb_viewer.ipynb
+/.streamlit/secrets.toml
+/ipynb_checkpoints
+/data/
+/*.mwb*
+/__pycache__/
+/streamlit/__pycache__/
+.DS_Store
