@@ -79,7 +79,7 @@ def show_protein(entry_id, df):
     
     pLDDT, pTM, file_name = run_query(query)[0]
 
-    structure_path = '/Users/taewoojung/Documents/Biological Databases/ESM_project/data/structures/'
+    structure_path = 'data/structures/'
     with open(structure_path+file_name) as ifile:
         pdb_string = "".join([x for x in ifile])
         ifile.close()
@@ -264,7 +264,7 @@ def show_mutation_summary(entry_id, entry_name, active_sites, binding_sites):
 
 def show_mutation(mutation_id, mutation_info_df):
     
-    alignment_path = '/Users/taewoojung/Documents/Biological Databases/ESM_project/data/alignments/'
+    alignment_path = 'data/alignments/'
 
     query = '''
             SELECT mutation_aa FROM cosmic_data \
@@ -284,7 +284,8 @@ def show_mutation(mutation_id, mutation_info_df):
         
         pLDDT, pTM, file_name = run_query(query)[0]
 
-        structure_path = '/Users/taewoojung/Documents/Biological Databases/ESM_project/data/structures/'
+        structure_path = 'data/structures/'
+        print(structure_path)
         with open(structure_path+file_name) as ifile:
             pdb_string = "".join([x for x in ifile])
             ifile.close()
@@ -308,7 +309,7 @@ def show_mutation(mutation_id, mutation_info_df):
             img_name = run_query(query).pop()[0]
             # caption = 'Orange: Wild Type, Lightblue: Mutant, Red: SNPs'
             st.image(alignment_path+img_name, width=600)
-            legend_file = '/Users/taewoojung/Documents/Biological Databases/ESM_project/streamlit/images/alignment_legend.png'
+            legend_file = 'streamlit/images/alignment_legend.png'
             st.image(legend_file, width=200)
         
         col1, col2 = st.columns(2)

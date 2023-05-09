@@ -315,7 +315,7 @@ def cosmic_tsv_to_tables(path, uniprot_tables, ELASPIC_input=False, ESM_fold_fas
         entry_name = entry_id_to_entry_name_and_seq[entry_id][0]
         mutations = entry_id_to_mutation_aa[entry_id]
 
-        path = '/Users/taewoojung/Documents/Biological Databases/ESM_project/data/esmfold.log'
+        path = 'data/esmfold.log'
 
         prediction_scores = []
 
@@ -387,7 +387,7 @@ def cosmic_tsv_to_tables(path, uniprot_tables, ELASPIC_input=False, ESM_fold_fas
     # Load ELASPIC result if ELASPIC_input is False
     elif not ELASPIC_input:
         cwd = os.getcwd()
-        ELASPIC_path = os.path.join(cwd, '/Users/taewoojung/Documents/Biological Databases/ESM_project/data/ELASPIC/results.txt')
+        ELASPIC_path = os.path.join(cwd, 'data/ELASPIC/results.txt')
         pd.options.display.max_colwidth = None
         ELASPIC_df = pd.read_csv(ELASPIC_path, sep='\t', header=0)
 
@@ -462,7 +462,7 @@ def cosmic_tsv_to_tables(path, uniprot_tables, ELASPIC_input=False, ESM_fold_fas
     pymol_align_colnames = ['mutation_id', 'path']
     pymol_align_values = []
 
-    alignments = os.listdir('/Users/taewoojung/Documents/Biological Databases/ESM_project/data/alignments')
+    alignments = os.listdir('data/alignments')
     
     mutation_id = ''
 
@@ -476,8 +476,8 @@ def cosmic_tsv_to_tables(path, uniprot_tables, ELASPIC_input=False, ESM_fold_fas
     return tables
 
 # cwd = os.getcwd()
-# uniprot_tsv_file = 'ESM_project/data/uniprot_breast_cancer.tsv'
-# cosmic_tsv_file = 'ESM_project/data/cosmic_filtered.tsv'
+# uniprot_tsv_file = 'data/uniprot_breast_cancer.tsv'
+# cosmic_tsv_file = 'data/cosmic_filtered.tsv'
 
 # uniprot_tables = uniprot_tsv_to_tables(os.path.join(cwd, uniprot_tsv_file))
 # proteins_colnames, proteins_values = uniprot_tables['proteins']

@@ -20,12 +20,12 @@ st.write('MutFold contains 3D protein structure of 2314 proteins (251 wild type 
           For the database, MySQL was used to store information gather from above resources.')
 
 st.subheader("**Schema**")
-schema_path = '/Users/taewoojung/Documents/Biological Databases/ESM_project/streamlit/images/schema.png'
+schema_path = 'streamlit/images/schema.png'
 st.image(schema_path, width=700)
 
 st.subheader("**Download Files**")
 st.caption("**UniProt:**")
-uniprot_file = '/Users/taewoojung/Documents/Biological Databases/ESM_project/data/uniprot_breast_cancer.tsv'
+uniprot_file = 'data/uniprot_breast_cancer.tsv'
 st.download_button(
             label="Download File",
             data=open(uniprot_file, 'rb').read(),
@@ -33,7 +33,7 @@ st.download_button(
             mime='text/plain',
         )
 st.caption("**COSMIC:**")
-cosmic_file = '/Users/taewoojung/Documents/Biological Databases/ESM_project/data/cosmic_filtered.tsv'
+cosmic_file = 'data/cosmic_filtered.tsv'
 st.download_button(
             label="Download File",
             data=open(cosmic_file, 'rb').read(),
@@ -42,8 +42,8 @@ st.download_button(
         )
 
 st.caption("**ELASPIC:**")
-elaspic_entry_file = '/Users/taewoojung/Documents/Biological Databases/ESM_project/data/ELASPIC_entry.txt'
-elaspic_file = '/Users/taewoojung/Documents/Biological Databases/ESM_project/data/ELASPIC/results.txt'
+elaspic_entry_file = 'data/ELASPIC_entry.txt'
+elaspic_file = 'data/ELASPIC/results.txt'
 st.download_button(
             label="Download Entry File",
             data=open(elaspic_entry_file, 'rb').read(),
@@ -58,7 +58,7 @@ st.download_button(
         )
     
 st.caption("**ESMFold:**")
-fasta_file = '/Users/taewoojung/Documents/Biological Databases/ESM_project/data/ESM_fold_entry_filtered_988.fasta'
+fasta_file = 'data/ESM_fold_entry_filtered_988.fasta'
 st.download_button(
             label="Download Fasta File",
             data=open(fasta_file, 'rb').read(),
