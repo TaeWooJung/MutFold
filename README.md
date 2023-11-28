@@ -18,7 +18,7 @@ For the setup and the prediction, I referred to the instruction provided by [ESM
 
 ```bash
 # Create a virtual conda environment
-conda create -f environment.yaml
+conda create -f environment.yml
 conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
 
 # Activate conda environment
