@@ -49,7 +49,7 @@ With the help of PyMol software, we can align wild-type and mutant proteins. You
 ```bash
 # Make sure all the protein structures are located in the 'data/structures' directory
 # and, 'mutation_info.tsv' and 'protein_alignment.py' are in the same location.
-pymol -cq protein_alignment.py.
+pymol -cq protein_alignment.py
 ```
 
 ## Create a MySQL Database
@@ -64,3 +64,24 @@ Use the following Python codes to create your the database:
 
 - [create_db.py](create_db.py)
 - [create_tables.py](create_tables.py)
+
+
+## Run a Streamlit App
+
+Create a '.streamlit/secrets.toml'
+
+```TOML
+# .streamlit/secrets.toml
+[mysql]
+host = "localhost"
+port = 3306
+database = "cancer_uniprotdb"
+user = "<username>"
+password = "<password>"
+```
+
+Run the app
+
+```bash
+streamlit run ./streamlit/Home.py
+```
