@@ -99,12 +99,12 @@ def super_prots():
 
                 alignment_name = 'aligned_' + prot_2.split('/')[-1][:-4]
                 pymol.cmd.save(f'./data/alignments/{alignment_name}.pdb', state=0)
-                # print(alignment_name)
-                # pymol.cmd.png(f'./data/alignments/{alignment_name}.png',
-                #             width=2000,
-                #             dpi=300,
-                #             ray=1
-                #             )
+                print(alignment_name)
+                pymol.cmd.png(f'./data/alignments/{alignment_name}.png',
+                            width=2000,
+                            dpi=300,
+                            ray=1
+                            )
                 pymol.cmd.reinitialize()
 
 if __name__ == '__main__':

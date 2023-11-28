@@ -14,6 +14,9 @@ cosmic_tsv_file = 'data/cosmic_filtered.tsv'
 uniprot_tables = uniprot_tsv_to_tables(os.path.join(cwd, uniprot_tsv_file))
 # print(uniprot_tables.keys())
 try:
+     '''
+        user name and user password are required
+    '''
      user = ''
      password = ''
 

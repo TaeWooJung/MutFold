@@ -2,6 +2,9 @@ import mysql.connector
 from mysql.connector import Error
 
 try:
+    '''
+        root password, user name and user password are required
+    '''
     connection = mysql.connector.connect(host='localhost',
                                          user='root',
                                          password='')

@@ -1,3 +1,4 @@
+name: mutfold
 channels:
   - conda-forge
   - bioconda
