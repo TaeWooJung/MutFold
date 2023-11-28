@@ -1,23 +1,21 @@
 import streamlit as st
 
-
-
 # Page setup
 st.set_page_config(page_title="3D Structure Prediction", page_icon="", layout="wide")
 
 st.title('About MutFold')
 st.subheader("**Purpose and Tools**")
-st.write('**MutFold** was created in a purpose of visualizing & comparing 3D protein structure of mutants proteins related to human breast cancer. \
+st.write('**MutFold** was created to visualize & compare the 3D protein structure of mutant proteins related to human breast cancer. \
          **Evolutionary Scale Modeling (ESMFold)** from Meta ([Github page](https://github.com/facebookresearch/esm)) was used to predict 3D protein \
-         structures for both wild types and mutants. Alignments between mutant and wild type proteins were performed using [**PyMol**](https://pymol.org/2/) software.\
-         To further assess the effect of mutation to protein, [**ELASPIC**](http://elaspic.kimlab.org/help/) tool was used to predict impact of protein affinity towards related proteins.')
+         structures for both wild types and mutants. Alignments between mutant and wild-type proteins were performed using [**PyMol**](https://pymol.org/2/) software.\
+         To further assess the effect of mutation on protein, [**ELASPIC**](http://elaspic.kimlab.org/help/) tool was used to predict the impact of protein affinity towards related proteins.')
 
 st.subheader("**Resoruces**")
-st.write('MutFold contains 3D protein structure of 2314 proteins (251 wild type proteins (protein length < 989bp) and 2063 mutant proteins. \
-          Proteins with sequence longer than 989bp showed rapid decrease in prediction score, hence, limited the length to 988bp. However, it is important to consider that \
-          prediction was done using default parameters of the model provided by ESMFold repository and paramters might not be optimal for longer sequences. \
+st.write('MutFold contains a 3D protein structure of 2314 proteins (251 wild-type proteins (protein length < 989bp) and 2063 mutant proteins. \
+          Proteins with sequences longer than 989bp showed a rapid decrease in prediction score, hence, limiting the length to 988bp. However, it is important to consider that \
+          the prediction was done using the default parameters of the model provided by the ESMFold repository and parameters might not be optimal for longer sequences. \
           All proteins related to breast cancer and mutations were retrieved from [**UniProt**](https://www.uniprot.org/) and [**COSMIC**](https://cancer.sanger.ac.uk/cosmic) respectively.\
-          For the database, MySQL was used to store information gather from above resources.')
+          For the database, MySQL was used to store information gathered from above resources.')
 
 st.subheader("**Schema**")
 schema_path = 'streamlit/images/schema.png'

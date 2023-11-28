@@ -454,8 +454,6 @@ else:
     st.warning('👈 Search protein(s) to visualize!')
 
 
-
-
 # Show the dataframe (we'll delete this later)
 # st.write(df_search)
 
