@@ -1,16 +1,15 @@
-# Files
+### Files
 test.ipynb
 test.py
 db_navigator.py
 pdb_viewer.ipynb
 .streamlit/secrets.toml
 .DS_Store
-*.log
 *.mwb*
 # create_db.py
 # create_tables.py
 
-# Directories
+### Directories
 backup
 __pycache__/
 streamlit/__pycache__/

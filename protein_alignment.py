@@ -17,6 +17,8 @@ with open('./mutation_info.tsv', 'r') as f:
         line = f.readline().strip()
         mutation_id_to_mutation_aa[mutation_id] = pos
 
+    f.close()
+
 cwd = os.getcwd()
 structures_path = os.path.join(cwd, 'data/structures')
 list_structure_3d = os.listdir(structures_path)
