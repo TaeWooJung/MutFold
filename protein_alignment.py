@@ -4,7 +4,7 @@ import os
 
 mutation_id_to_mutation_aa = dict()
 
-with open('./mutation_info.tsv', 'r') as f:
+with open('./data/mutation_info.tsv', 'r') as f:
     
     line = f.readline().strip()
     
@@ -22,14 +22,6 @@ with open('./mutation_info.tsv', 'r') as f:
 cwd = os.getcwd()
 structures_path = os.path.join(cwd, 'data/structures')
 list_structure_3d = os.listdir(structures_path)
-
-# align_finished = set()
-
-# for png in os.listdir('data/alignments'):
-#     png = png.split('_')
-    
-#     if '.DS' not in png and 'Store' not in png:
-#         align_finished.add(f'{png[1]}_{png[2]}')
 
 dict_structure_3d = dict()
 
