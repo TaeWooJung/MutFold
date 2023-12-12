@@ -46,7 +46,7 @@ def super_prots():
     path = 'data/structures/'
 
     for protein in dict_structure_3d:
-
+        
         prot_1 = f'{path}{protein}.pdb'
 
         for protein_mut in dict_structure_3d[protein]:
@@ -90,21 +90,14 @@ def super_prots():
                 # process. Adjust parameters accordingly.
 
                 alignment_name = 'aligned_' + prot_2.split('/')[-1][:-4]
-                pymol.cmd.save(f'./data/alignments/{alignment_name}.pdb', state=0)
+                # pymol.cmd.save(f'./data/alignments/{alignment_name}.pdb', state=0)
                 print(alignment_name)
                 pymol.cmd.png(f'./data/alignments/{alignment_name}.png',
-                            width=2000,
-                            dpi=300,
+                            width=500,
+                            dpi=100,
                             ray=1
                             )
                 pymol.cmd.reinitialize()
 
-if __name__ == '__main__':
-    # These are entries from PDB. It can work with already downloaded
-    # files, but you have to change the function accordingly
-    protein_matrix = [['1EWL', '4W5B'],
-                      ['4E2D', '3ATZ'],
-                      ]
-    for prot_1, prot_2 in protein_matrix:
-        super_prots()
-
+# run the alignment
+super_prots()

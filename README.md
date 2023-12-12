@@ -47,6 +47,8 @@ python3 esm/scripts/fold.py -i ../data/ESM_fold_entry_filtered_988.fasta -o ../d
 With the help of PyMol software, we can align wild-type and mutant proteins. You can download PyMol software from [here](https://pymol.org/2/). Once the software is installed, the license is needed to run the alignment. Get a license (educational-use-only) from [here](https://pymol.org/edu/). Then, run the following code with the given code.
 
 ```bash
+# Add PyMOL to the PATH (e.g., for MacOS)
+alias pymol=/Applications/PyMOL.app/Contents/MacOS/PyMOL
 # Make sure all the protein structures are located in the 'data/structures' directory
 # and, 'mutation_info.tsv' and 'protein_alignment.py' are in the same location.
 pymol -cq protein_alignment.py

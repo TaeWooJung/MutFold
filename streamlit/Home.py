@@ -48,7 +48,7 @@ def render_mol(pdb, spin=True, size=(500, 800), zoom=1, background_color='#0e111
     pdbview.setBackgroundColor(background_color)#('0xeeeeee')
     pdbview.center()
     pdbview.zoomTo()
-    pdbview.zoom(zoom, 800)
+    pdbview.zoom(zoom, 500)
     pdbview.spin(spin)
     showmol(pdbview, height=height, width=width)
 
@@ -93,7 +93,7 @@ def show_protein(entry_id, df):
     col1, _, col3 = st.columns(3)
     
     with col1:
-        render_mol(pdb_string, size=(500, 800))
+        render_mol(pdb_string, spin=False, size=(400, 800))
         st.caption(f"*pLDDT = {pLDDT}, **TM-Score = {pTM}")
     
     with col3:
